@@ -58,7 +58,7 @@ struct WriteInternalVariadics: CommandPlugin {
     let outputURL  = URL(fileURLWithPath: outputPath.string)
 
     let debugFH = fopen("/tmp/zzdebug.log", "w")
-    defer { fclose(debugFH) }
+    defer { fclose(debugFH!) }
     fputs("Start \(Date())", debugFH)
     
     // Lookup generator tool

@@ -114,7 +114,7 @@ struct GenerateCodeForSQLite: CommandPlugin {
     assert(debugFH != nil)
     fputs(msg, debugFH)
     fflush(debugFH)
-    fclose(debugFH)
+    fclose(debugFH!)
     #endif
   }
   
